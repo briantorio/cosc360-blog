@@ -12,8 +12,8 @@ class Post extends Model
     use HasFactory;
 
 
-    protected $connection = 'mongodb';
-    protected $collection = 'posts';   
+    protected $connection = 'mongodb'; // Specify MongoDB connection
+    protected $collection = 'posts';   // Specify MongoDB collection
     protected $fillable = ['title', 'content', 'user_id'];
 
     protected static function booted()

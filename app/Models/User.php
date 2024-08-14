@@ -15,7 +15,7 @@ class User extends Model implements AuthenticatableContract
 
     protected $connection = 'mongodb';
 
-    protected $collection = 'users'; 
+    protected $collection = 'users';
 
     protected $fillable = [
         'name', 'email', 'password', 'role',
