@@ -3,6 +3,11 @@
 @section('content')
     <div class="container">
         <h1>Create Post</h1>
+
+        <div class="mb-3">
+            <a href="{{ route('admin.posts.index') }}" class="btn btn-secondary">Back to Posts</a>
+        </div>
+
         <form action="{{ route('admin.posts.store') }}" method="POST">
             @csrf
             <div class="form-group">

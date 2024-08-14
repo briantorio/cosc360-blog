@@ -6,7 +6,11 @@ Main Page URL: localhost:8000/posts
 
 Commands (bash):
 php artisan db:seed -> adds 10 placeholder posts to database
+php artisan db:seed --class=AdminUserSeeder -> creates admin user
 
+Default Admin User:
+email: ad@admin.com
+pass: admin1234
 
 Brief:
 I initially had trouble setting up the environment of the program. Having to update the version of laravel to version 11, installing composer but not having the proper php installed etc.

@@ -3,8 +3,12 @@
 @section('title', $post->title)
 
 @section('content')
-    <h1>{{ $post->title }}</h1>
-    <p>{{ $post->content }}</p>
+    <div class="container">
+        <h1>{{ $post->title }}</h1>
+        <p>{{ $post->content }}</p>
 
-    <a href="{{ route('posts.index') }}">Back to Posts</a>
+        <div class="mt-3">
+            <a href="{{ route('posts.index') }}" class="btn btn-secondary">Back to Posts</a>
+        </div>
+    </div>
 @endsection

@@ -3,6 +3,9 @@
 @section('content')
     <div class="container">
         <h1>Edit Post</h1>
+        
+        <a href="{{ route('admin.posts.index') }}" class="btn btn-secondary mb-3">Back to Posts</a>
+        
         <form action="{{ route('admin.posts.update', $post->id) }}" method="POST">
             @csrf
             @method('PUT')

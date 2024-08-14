@@ -13,7 +13,7 @@ class User extends Model implements AuthenticatableContract
 {
     use HasFactory, Authenticatable;
 
-    protected $connection = 'mongodb';
+    protected $connection = 'mongodb'; 
 
     protected $collection = 'users';
 
@@ -31,7 +31,6 @@ class User extends Model implements AuthenticatableContract
 
     public const ROLE_ADMIN = 'admin';
     public const ROLE_USER = 'user';
-
 
     public function isAdmin()
     {

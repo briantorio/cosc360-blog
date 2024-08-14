@@ -31,6 +31,7 @@ class AdminPostController extends Controller
         if (!Auth::user() || !Auth::user()->isAdmin()) {
             return redirect()->route('home')->with('error', 'Unauthorized access.');
         }
+        
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',
@@ -62,6 +63,7 @@ class AdminPostController extends Controller
         if (!Auth::user() || !Auth::user()->isAdmin()) {
             return redirect()->route('home')->with('error', 'Unauthorized access.');
         }
+        
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'content' => 'required|string',

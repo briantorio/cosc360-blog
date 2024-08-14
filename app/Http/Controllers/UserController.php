@@ -17,7 +17,7 @@ class UserController extends Controller
             return redirect()->route('home')->with('error', 'Unauthorized access.');
         }
         
-        $roles = ['admin', 'author', 'user'];
+        $roles = ['admin', 'user'];
 
         return view('admin.users.create', compact('roles'));
     }
@@ -61,7 +61,7 @@ class UserController extends Controller
         if (!Auth::user() || !Auth::user()->isAdmin()) {
             return redirect()->route('home')->with('error', 'Unauthorized access.');
         }
-        
+
         $users = User::all();
 
         return view('admin.users.index', compact('users'));
@@ -123,7 +123,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         $user = User::findOrFail($id);
-
+        
         try {
             $user->delete();
             return redirect()->route('admin.users.index')->with('success', 'User deleted successfully.');

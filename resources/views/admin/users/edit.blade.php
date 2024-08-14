@@ -3,6 +3,11 @@
 @section('content')
     <div class="container">
         <h1>Edit User</h1>
+        
+        <div class="mb-3">
+            <a href="{{ route('admin.users.index') }}" class="btn btn-secondary">Back to Users</a>
+        </div>
+
         <form action="{{ route('admin.users.update', $user->id) }}" method="POST">
             @csrf
             @method('PUT')
