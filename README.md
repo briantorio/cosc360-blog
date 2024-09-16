@@ -1,7 +1,7 @@
 GitHub Repository = https://github.com/briantorio/cosc360-blog/commit/0764aae78cd4c0f49407ff6c4fea187caf07e9fc
 
 
-Main Page URL: localhost:8000/posts
+Main Page URL: localhost:8000/home
 
 
 Commands (bash):
