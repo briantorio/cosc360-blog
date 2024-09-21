@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\Api\ApiController;
 use App\Http\Controllers\AdminPostController;
 use App\Http\Controllers\Auth\RegisterController;
 
@@ -30,8 +31,8 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
 Route::prefix('api')->group(function () {
     // Get list of all blog posts
-    Route::get('/posts', [PostController::class, 'index']);
+    Route::get('/posts', [ApiController::class, 'index']);
 
     // Get details of a single blog post by ID
-    Route::get('/posts/{id}', [PostController::class, 'show']);
+    Route::get('/posts/{id}', [ApiController::class, 'show']);
 });
