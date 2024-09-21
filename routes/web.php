@@ -27,3 +27,11 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::resource('posts', AdminPostController::class);
 
 });
+
+Route::prefix('api')->group(function () {
+    // Get list of all blog posts
+    Route::get('/posts', [PostController::class, 'index']);
+
+    // Get details of a single blog post by ID
+    Route::get('/posts/{id}', [PostController::class, 'show']);
+});
